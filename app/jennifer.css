@@ -1,0 +1,27 @@
+/* Jennifer Lino — graphite, espresso, ivory and muted gold. */
+.essence-editorial { background: #f4eee8; }
+.essence-values { background: #e9ded2; }
+.essence-value { background: #faf6f0d9; border-color: #ffffffa8; }
+.essence-value-icon { background: #dcc8ae; color: #2a1c1a; }
+.essence-editorial-description, .essence-value p { color: #725f57; }
+.gallery-chapter, .closing-chapter, .footer, .result-dialog { background: #211917; }
+.gallery-photo, .comparison { background: #322623; }
+.gallery-heading p, .footer-main > div { color: #e0d1c4; }
+.ritual-chapter { background: #f4eee8; }
+.social-chapter { background: #e9ded2; }
+.closing-chapter { background: radial-gradient(circle at 80% 20%, #4b3630, #211917 58%); }
+.menu-dialog { background: #f4eee8; }
+.viewer-note { color: #d9b995; }
+.campaign { background: #211917; }
+.campaign::before { background: linear-gradient(90deg, #171210 0%, #1d1613fa 24%, #211916dd 43%, #261c1880 66%, #261c1820 100%), linear-gradient(180deg, #17121033, transparent 40%, #171210c4 100%); }
+.campaign-original { filter: saturate(.9) contrast(1.07) brightness(.84); object-position: center 27%; }
+.campaign-title-line:nth-child(3) { color: #d9b995; }
+.campaign-cta { background: #d9b995; border-color: #d9b995; }
+.campaign-cta:hover, .campaign-cta:focus-visible { background: #efd2ac; }
+@media (max-width: 700px) {
+  .gallery-heading p { max-width: 30rem; }
+  .gallery-photo { aspect-ratio: .88; }
+  .campaign::before { background: linear-gradient(180deg, #18120fa6 0%, #18120f08 18%, #18120f13 35%, #18120fd5 58%, #18120f 74%, #18120f 100%); }
+  .campaign h1 { font-size: clamp(49px, 12.4vw, 84px); }
+  .campaign-original { object-position: center 20%; }
+}
