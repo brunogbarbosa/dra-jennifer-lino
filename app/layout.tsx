@@ -12,7 +12,14 @@ export const metadata: Metadata = {
   title: site.seo.title,
   description: site.seo.description,
   ...(site.seo.url ? { alternates: { canonical: '/' } } : {}),
-  openGraph: { title: site.seo.title, description: site.seo.description, locale: 'pt_BR', type: 'website' },
+  openGraph: {
+    title: site.seo.title,
+    description: site.seo.description,
+    locale: 'pt_BR',
+    type: 'website',
+    images: [{ url: '/og-jennifer-lino.jpg', width: 1200, height: 630, alt: 'Dra. Jennifer Lino, biomédica esteta' }],
+  },
+  twitter: { card: 'summary_large_image', images: ['/og-jennifer-lino.jpg'] },
 };
 export default function RootLayout({children}: Readonly<{children:React.ReactNode}>) {
   return <html lang="pt-BR"><body style={{

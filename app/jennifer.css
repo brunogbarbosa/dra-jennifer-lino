@@ -13,15 +13,24 @@
 .menu-dialog { background: #f4eee8; }
 .viewer-note { color: #d9b995; }
 .campaign { background: #211917; }
-.campaign::before { background: linear-gradient(90deg, #171210 0%, #1d1613fa 24%, #211916dd 43%, #261c1880 66%, #261c1820 100%), linear-gradient(180deg, #17121033, transparent 40%, #171210c4 100%); }
-.campaign-original { filter: saturate(.9) contrast(1.07) brightness(.84); object-position: center 27%; }
+.campaign-portrait { left: 31%; }
+.campaign-silhouette { -webkit-mask-image: linear-gradient(90deg, transparent 0%, #0008 20%, #000 42%); mask-image: linear-gradient(90deg, transparent 0%, #0008 20%, #000 42%); }
+.campaign::before { background: linear-gradient(90deg, #171210 0%, #1d1613 22%, #211916df 36%, #261c1873 54%, #261c181f 70%, transparent 100%), linear-gradient(180deg, #17121024, transparent 46%, #171210ad 100%); }
+.campaign::after { background: radial-gradient(ellipse at 80% 38%, transparent 0%, #18151324 88%); mix-blend-mode: normal; }
+.campaign-original { filter: saturate(.96) contrast(1.04) brightness(1.06); object-position: center 27%; }
 .campaign-title-line:nth-child(3) { color: #d9b995; }
 .campaign-cta { background: #d9b995; border-color: #d9b995; }
 .campaign-cta:hover, .campaign-cta:focus-visible { background: #efd2ac; }
 @media (max-width: 700px) {
   .gallery-heading p { max-width: 30rem; }
   .gallery-photo { aspect-ratio: .88; }
-  .campaign::before { background: linear-gradient(180deg, #18120fa6 0%, #18120f08 18%, #18120f13 35%, #18120fd5 58%, #18120f 74%, #18120f 100%); }
+  .campaign { height: max(100svh, 900px); min-height: 900px; }
+  .campaign-portrait { inset: 105px 0 28% 0; }
+  .campaign-silhouette { -webkit-mask-image: none; mask-image: none; }
+  .campaign-topline { display: none; }
+  .campaign::before { background: linear-gradient(180deg, #18120f42 0%, #18120f00 23%, #18120f0a 38%, #18120fce 61%, #18120f 78%, #18120f 100%); }
+  .campaign::after { background: linear-gradient(90deg, #19151335, transparent 42%); }
   .campaign h1 { font-size: clamp(49px, 12.4vw, 84px); }
-  .campaign-original { object-position: center 20%; }
+  .campaign-original { object-position: center 20%; filter: saturate(.96) contrast(1.02) brightness(1.02); }
+  .campaign-seal { top: 190px; }
 }
